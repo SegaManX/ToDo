@@ -8,15 +8,17 @@ list.addEventListener('click', function(event) {
 
 function newElement() {
   var li = document.createElement("li");
-  var inputValue = document.getElementById("input1").value;
-  var t = document.createTextNode(inputValue);
+  var input1Value = document.getElementById("input1").value;
+  var input2Value = document.getElementById("input2").value;
+  var t = document.createTextNode(input1Value);
   li.appendChild(t);
-  if (inputValue != '') {
+  if (input1Value != '' && input2Value != '') {
     document.getElementById("UL1").appendChild(li);
   }
   document.getElementById("input1").value = "";
+  document.getElementById("input2").value = "";
   var span = document.createElement("SPAN");
-  var txt = document.createTextNode("Days Remaining: 3");
+  var txt = document.createTextNode("Days Remaining: " + input2Value);
   span.className = "daysRemaining";
   span.appendChild(txt);
   li.appendChild(span);
