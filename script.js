@@ -18,7 +18,7 @@ function newElement() {
   document.getElementById("input1").value = "";
   document.getElementById("input2").value = "";
   var span = document.createElement("SPAN");
-  var txt = document.createTextNode("Days Remaining: " + input2Value);
+  var txt = document.createTextNode("Date due: " + input2Value);
   span.className = "daysRemaining";
   span.appendChild(txt);
   li.appendChild(span);
